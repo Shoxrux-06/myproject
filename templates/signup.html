@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-box {
+            background: white;
+            margin: 40px auto;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px;
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .form-box h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #333333;
+        }
+
+        input {
+            display: block;
+            width: 330px;
+            padding: 6px 10px;
+            margin: 12px 0;
+            border: 1px solid gray;
+            border-radius: 8px;
+            font-size: 13px;
+            height: 20px;
+        }
+
+        button {
+            background: blue;
+            color: white;
+            padding: 6px 10px;
+            border: none;
+            border-radius: 8px;
+            width: 150px;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            height: 30px;
+        }
+
+        button:hover {
+            background: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>Sign Up</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+</body>
+</html>
